@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div>
+    <label for="txtUsuario">Ingrese usuario</label>
+    <input type="text" id="txtUsuario" [(ngModel)] = "usuario.nombre">
+
+    <br><br>
+
+    <label for="txtPassword">Ingrese Clave</label>
+    <input type="password" id="txtPassword" [(ngModel)] = "usuario.clave">
+    
+    <br>
+
+    <p>User: admin Password: admin</p>
+
+    <button (click) = "login()">Login</button>
+</div>
+<br>

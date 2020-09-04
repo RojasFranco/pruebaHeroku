@@ -1,1 +1,12 @@
-<p>bienvenido works!</p>
+<p>Bienvenido</p>
+
+<button (click) = "CargarPaises()" >Cargar Paises</button>
+<button routerLink = "" >Cerrar sesion</button>
+<table>
+    <tr *ngFor = "let pais of paises">
+        <td>{{ pais.name }}</td>
+        <td>{{ pais.capital }}</td>
+        <td><img src="{{ pais.flag }}" alt="" height="50px" width="70px"></td>
+    </tr>
+</table>
+
