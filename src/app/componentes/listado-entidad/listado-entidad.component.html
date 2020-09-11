@@ -1,0 +1,20 @@
+
+<table>
+    <tr>
+        <th>Sexo</th>
+        <th>Mail</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+        <th>Imagen</th>        
+    </tr>
+    <tr *ngFor = "let dato of listadoRecibido">
+        <td>{{dato.Sexo}}</td>
+        <td>{{dato.email}}</td>
+        <td>{{dato.Nombre}}</td>
+        <td>{{dato.Apellido}}</td>
+        <td>{{dato.FechaNac}}</td>
+        <td><img src="{{dato.FotoPerfil}}" height="70px" width="70px" alt=""></td>
+        <td><button>Seleccionar</button></td>
+    </tr>
+</table>

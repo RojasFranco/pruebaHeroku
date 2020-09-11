@@ -11,4 +11,8 @@ export class MiServicioService {
   public ObtenerPaises(){
     return this.http.get("https://restcountries.eu/rest/v2/");
   }
+
+  public ObtenerListado(){
+    return this.http.get("https://api.mocki.io/v1/570c5e5c");
+  }
 }

@@ -10,6 +10,8 @@ import { ErrorComponent } from './componentes/error/error.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule} from '@angular/common/http';
+import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
+import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule} from '@angular/common/http';
     NuevoComponenteComponent,
     BienvenidoComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListadoEntidadComponent,
+    ControlEntidadComponent
   ],
   imports: [
     BrowserModule,

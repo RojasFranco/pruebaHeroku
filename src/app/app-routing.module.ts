@@ -5,12 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path:"error", component: ErrorComponent },
   { path:"bienvenido", component: BienvenidoComponent },
-  { path:"", component: LoginComponent }
+  { path:"", component: LoginComponent },
+  { path: "paises/listado", component: ControlEntidadComponent}
 ]
 
 @NgModule({
