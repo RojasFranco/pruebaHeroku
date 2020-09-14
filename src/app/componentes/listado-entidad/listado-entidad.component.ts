@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ListadoEntidadComponent implements OnInit {
 
   @Input() listadoRecibido: any;
+  @Input() cargarBtnSeleccionar: boolean = true;
   @Output() eventoItemSeleccionado: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
