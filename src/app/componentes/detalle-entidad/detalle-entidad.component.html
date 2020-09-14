@@ -1,0 +1,15 @@
+<p>Usuario Elegido</p>
+
+<ul *ngIf="itemSeleccionado; else noSeleccionoAun">
+    <li>{{itemSeleccionado.Sexo}}</li>
+    <li>{{itemSeleccionado.email}}</li>
+    <li>{{itemSeleccionado.Nombre}}</li>
+    <li>{{itemSeleccionado.Apellido}}</li>
+    <li>{{itemSeleccionado.FechaNac}}</li>
+    <li><img src="{{ itemSeleccionado.FotoPerfil }}" height="100px" width="100px" alt=""></li>
+    <app-boton-entidad [itemBorrar] = "itemSeleccionado" (eventoEliminarItem)="eliminar($event)"></app-boton-entidad>
+</ul>
+
+<ng-template #noSeleccionoAun>
+    <p>Aun no ha seleccionado ninguno</p>
+</ng-template>

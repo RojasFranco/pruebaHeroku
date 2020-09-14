@@ -15,6 +15,6 @@
         <td>{{dato.Apellido}}</td>
         <td>{{dato.FechaNac}}</td>
         <td><img src="{{dato.FotoPerfil}}" height="70px" width="70px" alt=""></td>
-        <td><button>Seleccionar</button></td>
+        <td (click)="seleccionar(dato)"><button>Seleccionar</button></td>
     </tr>
 </table>

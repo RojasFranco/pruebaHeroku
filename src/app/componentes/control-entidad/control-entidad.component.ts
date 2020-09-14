@@ -9,6 +9,8 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 export class ControlEntidadComponent implements OnInit {
 
   public listadoEnviar: any;
+  public listadoDeEliminados: Array<any> = [];
+  public itemEnviar: any;
   constructor(private servicioListado: MiServicioService) { }
 
   ngOnInit(): void {
@@ -16,5 +18,21 @@ export class ControlEntidadComponent implements OnInit {
       this.listadoEnviar = rta;      
     });
   }  
+
+  seleccionarItem(dato){
+    this.itemEnviar = dato;
+  }
+
+  eliminar(itemEliminar){       
+    for (let index = 0; index < this.listadoEnviar.length; index++) {
+      const element = this.listadoEnviar[index];
+      if(element.id==itemEliminar.id){
+        this.listadoEnviar.splice(index, 1);
+        this.listadoDeEliminados.push(itemEliminar);
+        break;
+      }      
+    }    
+    this.itemEnviar=null;
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-listado-entidad',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListadoEntidadComponent implements OnInit {
 
   @Input() listadoRecibido: any;
+  @Output() eventoItemSeleccionado: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.listadoRecibido);
+  }
+
+  seleccionar(itemElegido){
+    this.eventoItemSeleccionado.emit(itemElegido);
   }
 
 }

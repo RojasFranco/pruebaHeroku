@@ -1,1 +1,12 @@
-<app-listado-entidad [listadoRecibido] = "listadoEnviar"></app-listado-entidad>
+<div class="row">
+    <div class="col-8">
+        <app-listado-entidad [listadoRecibido] = "listadoEnviar" (eventoItemSeleccionado)="seleccionarItem($event)"></app-listado-entidad>
+    </div>
+    
+    <div class="col-4">
+        <app-detalle-entidad [itemSeleccionado] = "itemEnviar" (eventEliminar)="eliminar($event)"></app-detalle-entidad>    
+    </div>   
+</div>
+<p>ELIMINADOS</p>
+<app-listado-entidad [listadoRecibido]="listadoDeEliminados"></app-listado-entidad>
+
